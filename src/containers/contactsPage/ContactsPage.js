@@ -1,5 +1,5 @@
 import React from "react";
-
+import {ContactForm} from "../../components/contactForm/ContactForm"
 export const ContactsPage = () => {
   /*
   Define state variables for 
@@ -23,8 +23,8 @@ export const ContactsPage = () => {
     <div>
       <section>
         <h2>Add Contact</h2> 
+        <ContactForm/>
       </section>
-      <hr />
       <section>
         <h2>Contacts</h2>
       </section>
