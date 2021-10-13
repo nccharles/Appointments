@@ -1,6 +1,6 @@
 import React from "react";
 
-export const AppointmentsPage = () => {
+const AppointmentsPage = () => {
   /*
   Define state variables for 
   appointment info
@@ -26,3 +26,4 @@ export const AppointmentsPage = () => {
     </div>
   );
 };
+export default AppointmentsPage

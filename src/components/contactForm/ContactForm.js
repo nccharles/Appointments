@@ -1,28 +1,24 @@
 import React from "react";
 
 export const ContactForm = ({
-  name,
-  setName,
-  phone,
-  setPhone,
-  email,
-  setEmail,
+  onChange,
   handleSubmit
 }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
       <label>Name</label>
-      <input type="text" name={name} onChange={setName}/>
+      <input type="text" name="name" onChange={onChange}/>
       </div>
       <div>
       <label>Phone</label>
-      <input type="tel" name={phone} onChange={setPhone}/>
+      <input type="tel" name="phone" onChange={onChange}/>
       </div>
       <div>
       <label>Email</label>
-      <input type="email" name={email} onChange={setEmail}/>
+      <input type="email" name="email" onChange={onChange}/>
       </div>
+      <input type="submit" value="ADD"/>
     </form>
   );
 };
