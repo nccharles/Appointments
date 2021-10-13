@@ -1,34 +1,34 @@
 import { actionTypes } from './action';
 
-export const initappointment = {
-    appointments: [],
-    appointmentTotal: 0,
+export const initContact = {
+    contacts: [],
+    contactTotal: 0,
 };
 
-function reducer(state = initappointment, action) {
+function reducer(state = initContact, action) {
     switch (action.type) {
-        case actionTypes.GET_APPOINTMENT_SUCCESS:
+        case actionTypes.GET_CONTACT_SUCCESS:
             return {
                 ...state,
             };
-        case actionTypes.UPDATE_APPOINTMENT_SUCCESS:
+        case actionTypes.UPDATE_CONTACT_SUCCESS:
             return {
                 ...state,
-                ...{ appointments: action.payload.appointments },
-                ...{ appointmentTotal: action.payload.appointmentTotal },
+                ...{ contacts: action.payload.contacts },
+                ...{ contactTotal: action.payload.contactTotal },
             };
-        case actionTypes.CLEAR_APPOINTMENT_SUCCESS:
+        case actionTypes.CLEAR_CONTACT_SUCCESS:
             return {
                 ...state,
-                ...{ appointments: action.payload.appointments },
-                ...{ appointmentTotal: action.payload.appointmentTotal },
+                ...{ contacts: action.payload.contacts },
+                ...{ contactTotal: action.payload.contactTotal },
             };
-        case actionTypes.GET_APPOINTMENT_ERROR:
+        case actionTypes.GET_CONTACT_ERROR:
             return {
                 ...state,
                 ...{ error: action.error },
             };
-        case actionTypes.UPDATE_APPOINTMENT_ERROR:
+        case actionTypes.UPDATE_CONTACT_ERROR:
             return {
                 ...state,
                 ...{ error: action.error },
