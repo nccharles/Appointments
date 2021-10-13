@@ -36,12 +36,12 @@ export function getAppointmentError(error) {
     };
 }
 
-export function addAppointment(product) {
-    return { type: actionTypes.ADD_APPOINTMENT, product };
+export function addAppointment(appointment) {
+    return { type: actionTypes.ADD_APPOINTMENT, appointment };
 }
 
-export function removeAppointment(product) {
-    return { type: actionTypes.REMOVE_APPOINTMENT, product };
+export function removeAppointment(appointment) {
+    return { type: actionTypes.REMOVE_APPOINTMENT, appointment };
 }
 
 

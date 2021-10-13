@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import contact from './contacts/reducer';
-import appointment from './appointments/reducer';
+import contact from './contact/reducer';
+import appointment from './appointment/reducer';
 
 export default combineReducers({
     contact,
