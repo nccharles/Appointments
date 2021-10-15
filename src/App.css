@@ -15,7 +15,6 @@ font-weight: bold;
 }
 h2,h3,h4,h5{
     text-transform: capitalize;
-    background: #e17055;
 }
 form{
     margin-top: 30px;
