@@ -1,0 +1,25 @@
+
+nav{
+    background: #e17055;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px 0 #e1715565;
+}
+h1,label{
+    color: white;
+}
+h1{
+padding: 10px auto;
+font-size: 16px;
+font-weight: bold;
+}
+h2,h3,h4,h5{
+    text-transform: capitalize;
+    background: #e17055;
+}
+form{
+    margin-top: 30px;
+}
+Button{
+    height: 40px;
+}

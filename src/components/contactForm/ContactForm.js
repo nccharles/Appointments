@@ -6,15 +6,15 @@ export const ContactForm = ({
 }) => {
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+      <div className="form-group">
       <label>Name</label>
       <input type="text" name="name" onChange={onChange}/>
       </div>
-      <div>
+      <div className="form-group">
       <label>Phone</label>
       <input type="tel" name="phone" onChange={onChange}/>
       </div>
-      <div>
+      <div className="form-group">
       <label>Email</label>
       <input type="email" name="email" onChange={onChange}/>
       </div>

@@ -43,7 +43,7 @@ function* addContactSaga(payload) {
     currentContact.contacts.push(contact);
     currentContact.contactTotal++;
     yield put(updateContactSuccess(currentContact));
-    modalSuccess("success");
+    // modalSuccess("success");
   } catch (err) {
     yield put(getContactError(err));
   }
@@ -65,7 +65,7 @@ function* removeContactSaga(payload) {
       localContact.contactTotal = 0;
     }
     yield put(updateContactSuccess(localContact));
-    modalWarning("warning");
+    // modalWarning("warning");
   } catch (err) {
     yield put(getContactError(err));
   }

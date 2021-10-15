@@ -2,10 +2,11 @@ import React from "react";
 import { Tile } from "../tile/Tile";
 import { removeContact } from "../../store/contact/action";
 import { connect } from 'react-redux';
+import "./TileList.css"
 const TileList = ({ data, onRemovePressed }) => {
   const { contacts } = data;
   return (
-    <div>
+    <div className="tile-list-header">
       {contacts.map((contact) => (
         <Tile contact={contact} removeContact={onRemovePressed} />
       ))}

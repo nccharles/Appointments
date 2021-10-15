@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { addContact, clearContact } from "../../store/contact/action";
 import { connect } from "react-redux";
+import { Button } from 'react-bootstrap';
 import TileList from "../../components/tileList/TileList";
 import { ContactForm } from "../../components/contactForm/ContactForm";
+import "./contactsPage.css"
 const ContactsPage = ({ contacts, onCreatePressed, onClearPressed }) => {
   /*
   Define state variables for 
@@ -30,14 +32,16 @@ const ContactsPage = ({ contacts, onCreatePressed, onClearPressed }) => {
   };
 
   return (
-    <div>
-      <section>
-        <h2>Add Contact</h2>
+    <div className="content row">
+      <section className="col-md-4">
+        <h1>Add Contact</h1>
         <ContactForm handleSubmit={handleSubmit} onChange={onChange} />
       </section>
-      <section>
-        <h2>Contacts</h2>
-        <button onClick={() => onClearPressed()}>Clear</button>
+      <section className="col-md-4">
+        <div className="contacts-header">
+        <h1>Contacts</h1>
+        <Button variant="danger" onClick={() => onClearPressed()}>Clear</Button>
+        </div>
         <TileList />
       </section>
     </div>
