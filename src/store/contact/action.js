@@ -36,12 +36,12 @@ export function getContactError(error) {
     };
 }
 
-export function addContact(product) {
-    return { type: actionTypes.ADD_CONTACT, product };
+export function addContact(contact) {
+    return { type: actionTypes.ADD_CONTACT, contact };
 }
 
-export function removeContact(product) {
-    return { type: actionTypes.REMOVE_CONTACT, product };
+export function removeContact(contact) {
+    return { type: actionTypes.REMOVE_CONTACT, contact };
 }
 
 

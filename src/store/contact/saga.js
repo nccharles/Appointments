@@ -36,7 +36,7 @@ function* addContactSaga(payload) {
   try {
     const { contact } = payload;
     const localContact = JSON.parse(
-      localStorage.getContact("persist:Appointments")
+      localStorage.getItem("persist:Appointments")
     ).contact;
     let currentContact = JSON.parse(localContact);
 
@@ -53,7 +53,7 @@ function* removeContactSaga(payload) {
   try {
     const { contact } = payload;
     let localContact = JSON.parse(
-      JSON.parse(localStorage.getContact("persist:Appointments")).contact
+      JSON.parse(localStorage.getItem("persist:Appointments")).contact
     );
     let index = localContact.contacts.findIndex(
       (contact) => contact.id === contact.id
