@@ -2,11 +2,16 @@
 nav{
     background: #e17055;
     padding: 10px;
-    border-radius: 10px;
     box-shadow: 0 0 50px 0 #e1715565;
 }
-h1,label{
+.link{
     color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+h1,label{
+    color: #2d3436;
+    font-weight: 900;
 }
 h1{
 padding: 10px auto;
@@ -25,9 +30,7 @@ h5{
     color: #636e72;
     font-size: 14px; 
 }
-form{
-    margin-top: 30px;
-}
+
 Button{
     height: 40px;
 }

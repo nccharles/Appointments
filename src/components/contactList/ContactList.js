@@ -1,14 +1,14 @@
 import React from "react";
-import { Tile } from "../tile/Tile";
+import { Contact } from "../contact/Contact";
 import { removeContact } from "../../store/contact/action";
 import { connect } from 'react-redux';
-import "./TileList.css"
-const TileList = ({ data, onRemovePressed }) => {
+import "./ContactList.css"
+const ContactList = ({ data, onRemovePressed }) => {
   const { contacts } = data;
   return (
-    <div className="tile-list-header">
+    <div className="contact-list-header">
       {contacts.map((contact) => (
-        <Tile contact={contact} removeContact={onRemovePressed} />
+        <Contact contact={contact} removeContact={onRemovePressed} />
       ))}
     </div>
   );
@@ -19,4 +19,4 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   onRemovePressed: (contact) => dispatch(removeContact(contact)),
 });
-export default connect(mapStateToProps, mapDispatchToProps)(TileList);
+export default connect(mapStateToProps, mapDispatchToProps)(ContactList);

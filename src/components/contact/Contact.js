@@ -1,9 +1,9 @@
 import React from "react";
-import "./Tile.css"
+import "./Contact.css"
 import { Button } from 'react-bootstrap';
-export const Tile = ({ contact,removeContact }) => {
+export const Contact = ({ contact,removeContact }) => {
   return (
-    <div className="tile-container">
+    <div className="contact-container">
       <div className="section">
       <h2>{contact.name}</h2>
       <h4>{contact.email}</h4>

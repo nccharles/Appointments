@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { addContact, clearContact } from "../../store/contact/action";
 import { connect } from "react-redux";
 import { Button } from 'react-bootstrap';
-import TileList from "../../components/tileList/TileList";
+import ContactList from "../../components/contactList/ContactList";
 import { ContactForm } from "../../components/contactForm/ContactForm";
 import "./contactsPage.css"
 const ContactsPage = ({ contacts, onCreatePressed, onClearPressed }) => {
@@ -35,6 +35,7 @@ const ContactsPage = ({ contacts, onCreatePressed, onClearPressed }) => {
     <div className="content row">
       <section className="col-md-4">
         <h1>Add Contact</h1>
+        <hr/>
         <ContactForm handleSubmit={handleSubmit} onChange={onChange} />
       </section>
       <section className="col-md-4">
@@ -42,7 +43,8 @@ const ContactsPage = ({ contacts, onCreatePressed, onClearPressed }) => {
         <h1>Contacts</h1>
         <Button variant="danger" onClick={() => onClearPressed()}>Clear All</Button>
         </div>
-        <TileList />
+        <hr/>
+        <ContactList />
       </section>
     </div>
   );

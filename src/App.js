@@ -23,10 +23,10 @@ function App() {
   return (
     <>
       <nav>
-        <NavLink to={ROUTES.CONTACTS} activeClassName="active">
+        <NavLink to={ROUTES.CONTACTS} className="link" activeClassName="active">
           Contacts
         </NavLink>
-        <NavLink to={ROUTES.APPOINTMENTS} activeClassName="active">
+        <NavLink to={ROUTES.APPOINTMENTS} className="link"  activeClassName="active">
           Appointments
         </NavLink>
       </nav>

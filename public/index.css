@@ -67,16 +67,16 @@ select {
   box-sizing: border-box;
 }
 
-.tile {
+.contact {
   margin: 0;
   font-size: 14px;
   margin-bottom: 4px;
 }
 
-.tile.tile-title {
+.contact.contact-title {
   font-weight: bold;
 }
 
-.tile-container {
+.contact-container {
   margin-bottom: 20px;
 }
