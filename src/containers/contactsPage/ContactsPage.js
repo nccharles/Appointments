@@ -1,9 +1,9 @@
-import React, { useState,useEffect } from "react";
-import { addContact,removeContact } from "../../store/contact/action";
-import { connect } from 'react-redux';
-import TileList from '../../components/tileList/TileList'
+import React, { useState, useEffect } from "react";
+import { addContact, clearContact } from "../../store/contact/action";
+import { connect } from "react-redux";
+import TileList from "../../components/tileList/TileList";
 import { ContactForm } from "../../components/contactForm/ContactForm";
-const ContactsPage = ({ contacts, onCreatePressed,onRemoveContact }) => {
+const ContactsPage = ({ contacts, onCreatePressed, onClearPressed }) => {
   /*
   Define state variables for 
   contact info and duplicate check
@@ -14,17 +14,14 @@ const ContactsPage = ({ contacts, onCreatePressed,onRemoveContact }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let tmp = contact;
-    tmp.id = contacts.contactTotal+1;
-    onCreatePressed(tmp)
+    tmp.id = contacts.contactTotal + 1;
+    onCreatePressed(tmp);
     /*
     Add contact info and clear data
     if the contact name is not a duplicate
     */
   };
-  /*
-  Using hooks, check for contact name in the 
-  contacts array variable in props
-  */
+
   const onChange = (e) => {
     setContact((prevState) => ({
       ...prevState,
@@ -40,7 +37,8 @@ const ContactsPage = ({ contacts, onCreatePressed,onRemoveContact }) => {
       </section>
       <section>
         <h2>Contacts</h2>
-        <TileList/>
+        <button onClick={() => onClearPressed()}>Clear</button>
+        <TileList />
       </section>
     </div>
   );
@@ -50,6 +48,7 @@ const mapStateToProps = (state) => ({
   contacts: state.contact,
 });
 const mapDispatchToProps = (dispatch) => ({
-  onCreatePressed: (contact) => dispatch(addContact(contact))
+  onClearPressed: () => dispatch(clearContact()),
+  onCreatePressed: (contact) => dispatch(addContact(contact)),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(ContactsPage);

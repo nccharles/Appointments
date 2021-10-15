@@ -52,6 +52,12 @@ export function updateContactSuccess(payload) {
     };
 }
 
+export function clearContact(payload) {
+    return {
+        type: actionTypes.CLEAR_CONTACT,
+        payload,
+    };
+}
 export function clearContactSuccess(payload) {
     return {
         type: actionTypes.CLEAR_CONTACT_SUCCESS,

@@ -88,5 +88,6 @@ export default function* rootSaga() {
   yield all([takeEvery(actionTypes.GET_CONTACT, getContactSaga)]);
   yield all([takeEvery(actionTypes.ADD_CONTACT, addContactSaga)]);
   yield all([takeEvery(actionTypes.REMOVE_CONTACT, removeContactSaga)]);
+  yield all([takeEvery(actionTypes.CLEAR_CONTACT, clearContactSaga)]);
   yield all([takeEvery(actionTypes.CLEAR_CONTACT_SUCCESS, clearContactSaga)]);
 }
