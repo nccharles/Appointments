@@ -30,8 +30,6 @@ h2 {
   margin-bottom: 18px;
 }
 
-section {
-}
 
 hr {
   border: none;
@@ -40,7 +38,7 @@ hr {
 }
 
 input[type="submit"] {
-  background: #03a8d8;
+  background: #e17055;
   border-radius: 4px;
   color: #ffffff;
   font-weight: bold;
