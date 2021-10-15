@@ -40,7 +40,7 @@ const ContactsPage = ({ contacts, onCreatePressed, onClearPressed }) => {
       <section className="col-md-4">
         <div className="contacts-header">
         <h1>Contacts</h1>
-        <Button variant="danger" onClick={() => onClearPressed()}>Clear</Button>
+        <Button variant="danger" onClick={() => onClearPressed()}>Clear All</Button>
         </div>
         <TileList />
       </section>
