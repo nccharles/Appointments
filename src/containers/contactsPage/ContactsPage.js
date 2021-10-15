@@ -1,8 +1,9 @@
 import React, { useState,useEffect } from "react";
-import { addContact,getContact } from "../../store/contact/action";
+import { addContact,removeContact } from "../../store/contact/action";
 import { connect } from 'react-redux';
+import TileList from '../../components/tileList/TileList'
 import { ContactForm } from "../../components/contactForm/ContactForm";
-const ContactsPage = ({ contacts, onCreatePressed }) => {
+const ContactsPage = ({ contacts, onCreatePressed,onRemoveContact }) => {
   /*
   Define state variables for 
   contact info and duplicate check
@@ -15,7 +16,6 @@ const ContactsPage = ({ contacts, onCreatePressed }) => {
     let tmp = contact;
     tmp.id = contacts.contactTotal+1;
     onCreatePressed(tmp)
-    console.log(contacts.contacts);
     /*
     Add contact info and clear data
     if the contact name is not a duplicate
@@ -40,6 +40,7 @@ const ContactsPage = ({ contacts, onCreatePressed }) => {
       </section>
       <section>
         <h2>Contacts</h2>
+        <TileList/>
       </section>
     </div>
   );
@@ -49,6 +50,6 @@ const mapStateToProps = (state) => ({
   contacts: state.contact,
 });
 const mapDispatchToProps = (dispatch) => ({
-  onCreatePressed: (contact) => dispatch(addContact(contact)),
+  onCreatePressed: (contact) => dispatch(addContact(contact))
 });
 export default connect(mapStateToProps, mapDispatchToProps)(ContactsPage);

@@ -56,7 +56,7 @@ function* removeContactSaga(payload) {
       JSON.parse(localStorage.getItem("persist:Appointments")).contact
     );
     let index = localContact.contacts.findIndex(
-      (contact) => contact.id === contact.id
+      (c) => c.id === contact.id
     );
     localContact.contactTotal = localContact.contactTotal - 1;
     localContact.contacts.splice(index, 1);
