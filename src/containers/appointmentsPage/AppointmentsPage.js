@@ -30,6 +30,7 @@ const AppointmentsPage = ({ data, onCreatePressed, onClearPressed }) => {
       ...prevState,
       [e.target.name]: e.target.value,
     }));
+    console.log(appointment)
   };
 
   return (

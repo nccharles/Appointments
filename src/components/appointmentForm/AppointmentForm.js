@@ -18,6 +18,10 @@ export const AppointmentForm = ({
       <input type="text" name="title" onChange={onChange}/>
       </div>
       <div className="form-group">
+      <label>Contact</label>
+      <ContactPicker name="contact"  onChange={onChange}/>
+      </div>
+      <div className="form-group">
       <label>Date</label>
       <input type="date" name="date" onChange={onChange}/>
       </div>
@@ -25,7 +29,6 @@ export const AppointmentForm = ({
       <label>Time</label>
       <input type="time" name="time" onChange={onChange}/>
       </div>
-      <ContactPicker/>
       <input type="submit" value="ADD"/>
     </form>
   );
