@@ -58,6 +58,12 @@ export function clearAppointmentSuccess(payload) {
         payload,
     };
 }
+export function clearAppointment(payload) {
+    return {
+        type: actionTypes.CLEAR_APPOINTMENT,
+        payload,
+    };
+}
 
 export function updateAppointmentError(payload) {
     return {

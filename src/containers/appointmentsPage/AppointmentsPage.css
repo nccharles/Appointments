@@ -1,0 +1,27 @@
+.content{
+    justify-content: space-around;
+    padding: 20px;
+    min-height: 800px;
+    border-radius: 10px;
+    margin: auto 5px;
+    background: #ecf0f1;
+    box-shadow: 0 0 50px 0 rgba(253, 203, 110,0.2);
+}
+.appointments-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+section{
+    padding: 20px;
+}
+section:last-child{
+    width: 40%;
+}
+section:first-child{
+    width: 40%;
+    padding: 30px;
+}
+section:first-child h1{
+    margin-bottom: 30px;
+}

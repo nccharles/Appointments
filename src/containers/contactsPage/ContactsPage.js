@@ -12,7 +12,6 @@ const ContactsPage = ({ contacts, onCreatePressed, onClearPressed }) => {
   */
 
   const [contact, setContact] = useState({});
-  const [isAdded, setCheck] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     e.target.reset();
