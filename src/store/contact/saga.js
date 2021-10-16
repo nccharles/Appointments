@@ -39,11 +39,9 @@ function* addContactSaga(payload) {
       localStorage.getItem("persist:Appointments")
     ).contact;
     let currentContact = JSON.parse(localContact);
-
     currentContact.contacts.push(contact);
     currentContact.contactTotal++;
     yield put(updateContactSuccess(currentContact));
-    // modalSuccess("success");
   } catch (err) {
     yield put(getContactError(err));
   }
@@ -55,9 +53,7 @@ function* removeContactSaga(payload) {
     let localContact = JSON.parse(
       JSON.parse(localStorage.getItem("persist:Appointments")).contact
     );
-    let index = localContact.contacts.findIndex(
-      (c) => c.id === contact.id
-    );
+    let index = localContact.contacts.findIndex((c) => c.id === contact.id);
     localContact.contactTotal = localContact.contactTotal - 1;
     localContact.contacts.splice(index, 1);
     if (localContact.contacts.length === 0) {
@@ -70,7 +66,6 @@ function* removeContactSaga(payload) {
     yield put(getContactError(err));
   }
 }
-
 
 function* clearContactSaga() {
   try {

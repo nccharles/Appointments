@@ -15,9 +15,19 @@ const ContactsPage = ({ contacts, onCreatePressed, onClearPressed }) => {
   const [isAdded, setCheck] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
+    e.target.reset();
     let tmp = contact;
+    if(!contact.name || !contact.phone || !contact.email) return alert('Please add contact')
+    let index = contacts.contacts.find(
+      (c) =>
+        c.phone === contact.phone ||
+        c.email === contact.email ||
+        c.name === contact.name
+    );
+    if(index) return alert("Already Exist")
     tmp.id = contacts.contactTotal + 1;
     onCreatePressed(tmp);
+    setContact({})
     /*
     Add contact info and clear data
     if the contact name is not a duplicate
