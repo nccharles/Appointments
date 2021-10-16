@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { addContact, clearContact } from "../../store/contact/action";
 import { connect } from "react-redux";
-import { Button } from 'react-bootstrap';
+import { Button } from "react-bootstrap";
 import ContactList from "../../components/contactList/ContactList";
 import { ContactForm } from "../../components/contactForm/ContactForm";
-import "./contactsPage.css"
+import "./contactsPage.css";
 const ContactsPage = ({ contacts, onCreatePressed, onClearPressed }) => {
   /*
   Define state variables for 
@@ -17,17 +17,18 @@ const ContactsPage = ({ contacts, onCreatePressed, onClearPressed }) => {
     e.preventDefault();
     e.target.reset();
     let tmp = contact;
-    if(!contact.name || !contact.phone || !contact.email) return alert('Please add contact')
+    if (!contact.name || !contact.phone || !contact.email)
+      return alert("Please add contact");
     let index = contacts.contacts.find(
       (c) =>
         c.phone === contact.phone ||
         c.email === contact.email ||
         c.name === contact.name
     );
-    if(index) return alert("Already Exist")
+    if (index) return alert("Already Exist");
     tmp.id = contacts.contactTotal + 1;
     onCreatePressed(tmp);
-    setContact({})
+    setContact({});
     /*
     Add contact info and clear data
     if the contact name is not a duplicate
@@ -45,15 +46,17 @@ const ContactsPage = ({ contacts, onCreatePressed, onClearPressed }) => {
     <div className="content row">
       <section className="col-md-4">
         <h1>Add Contact</h1>
-        <hr/>
+        <hr />
         <ContactForm handleSubmit={handleSubmit} onChange={onChange} />
       </section>
       <section className="col-md-4">
         <div className="contacts-header">
-        <h1>Contacts</h1>
-        <Button variant="danger" onClick={() => onClearPressed()}>Clear All</Button>
+          <h1>Contacts</h1>
+          <Button variant="danger" onClick={() => onClearPressed()}>
+            Clear All
+          </Button>
         </div>
-        <hr/>
+        <hr />
         <ContactList />
       </section>
     </div>
