@@ -1,9 +1,6 @@
 import React from "react";
-import ContactPicker from '../contactPicker/ContactPicker'
-export const AppointmentForm = ({
-  onChange,
-  handleSubmit
-}) => {
+import ContactPicker from "../contactPicker/ContactPicker";
+export const AppointmentForm = ({ onChange, contacts, handleSubmit }) => {
   const getTodayString = () => {
     const [month, day, year] = new Date()
       .toLocaleDateString("en-US")
@@ -14,22 +11,22 @@ export const AppointmentForm = ({
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-group">
-      <label>Title</label>
-      <input type="text" name="title" onChange={onChange}/>
+        <label>Title</label>
+        <input type="text" name="title" onChange={onChange} />
       </div>
       <div className="form-group">
-      <label>Contact</label>
-      <ContactPicker name="contact"  onChange={onChange}/>
+        <label>Contact</label>
+        <ContactPicker name="contact" contacts={contacts} onChange={onChange} />
       </div>
       <div className="form-group">
-      <label>Date</label>
-      <input type="date" name="date" onChange={onChange}/>
+        <label>Date</label>
+        <input type="date" name="date" onChange={onChange} />
       </div>
       <div className="form-group">
-      <label>Time</label>
-      <input type="time" name="time" onChange={onChange}/>
+        <label>Time</label>
+        <input type="time" name="time" onChange={onChange} />
       </div>
-      <input type="submit" value="ADD"/>
+      <input type="submit" value="ADD" />
     </form>
   );
 };

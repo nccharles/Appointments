@@ -1,11 +1,19 @@
 import React, { useState } from "react";
-import { addAppointment, clearAppointment } from "../../store/appointment/action";
+import {
+  addAppointment,
+  clearAppointment,
+} from "../../store/appointment/action";
 import { connect } from "react-redux";
 import { Button } from "react-bootstrap";
 import AppointmentList from "../../components/appointmentList/AppointmentList";
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
 import "./AppointmentsPage.css";
-const AppointmentsPage = ({ data, onCreatePressed, onClearPressed }) => {
+const AppointmentsPage = ({
+  data,
+  contacts,
+  onCreatePressed,
+  onClearPressed,
+}) => {
   /*
   Define state variables for 
   appointment info and duplicate check
@@ -19,6 +27,7 @@ const AppointmentsPage = ({ data, onCreatePressed, onClearPressed }) => {
     tmp.id = data.appointmentTotal + 1;
     onCreatePressed(tmp);
     setAppointment({});
+    console.log(data.appointments)
     /*
     Add appointment info and clear data
     if the appointment name is not a duplicate
@@ -30,7 +39,6 @@ const AppointmentsPage = ({ data, onCreatePressed, onClearPressed }) => {
       ...prevState,
       [e.target.name]: e.target.value,
     }));
-    console.log(appointment)
   };
 
   return (
@@ -38,7 +46,11 @@ const AppointmentsPage = ({ data, onCreatePressed, onClearPressed }) => {
       <section className="col-md-4">
         <h1>Add Appointment</h1>
         <hr />
-        <AppointmentForm handleSubmit={handleSubmit} onChange={onChange} />
+        <AppointmentForm
+          contacts={contacts}
+          handleSubmit={handleSubmit}
+          onChange={onChange}
+        />
       </section>
       <section className="col-md-4">
         <div className="appointments-header">
@@ -56,6 +68,7 @@ const AppointmentsPage = ({ data, onCreatePressed, onClearPressed }) => {
 
 const mapStateToProps = (state) => ({
   data: state.appointment,
+  contacts: state.contact.contacts,
 });
 const mapDispatchToProps = (dispatch) => ({
   onClearPressed: () => dispatch(clearAppointment()),

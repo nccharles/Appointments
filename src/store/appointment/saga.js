@@ -36,10 +36,14 @@ function* addAppointmentSaga(payload) {
   try {
     const { appointment } = payload;
     const localAppointment = JSON.parse(
-      localStorage.getAppointment("persist:Appointments")
+      localStorage.getItem("persist:Appointments")
     ).appointment;
     let currentAppointment = JSON.parse(localAppointment);
-
+    let localContact = JSON.parse(
+      JSON.parse(localStorage.getItem("persist:Appointments")).contact
+    );
+    let contactObj = localContact.contacts.find((c) => c.id == parseInt(appointment.contact));
+    appointment.contact = contactObj;
     currentAppointment.appointments.push(appointment);
     currentAppointment.appointmentTotal++;
     yield put(updateAppointmentSuccess(currentAppointment));
@@ -53,7 +57,7 @@ function* removeAppointmentSaga(payload) {
   try {
     const { appointment } = payload;
     let localAppointment = JSON.parse(
-      JSON.parse(localStorage.getAppointment("persist:Appointments")).appointment
+      JSON.parse(localStorage.getItem("persist:Appointments")).appointment
     );
     let index = localAppointment.appointments.findIndex(
       (appoint) => appoint.id === appointment.id
