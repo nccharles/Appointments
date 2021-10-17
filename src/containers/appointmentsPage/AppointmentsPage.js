@@ -22,12 +22,18 @@ const AppointmentsPage = ({
   const [appointment, setAppointment] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (
+      !appointment.title ||
+      !appointment.contact ||
+      !appointment.date ||
+      !appointment.time
+    )
+      return alert("Please fill all required fields");
     e.target.reset();
     let tmp = appointment;
     tmp.id = data.appointmentTotal + 1;
     onCreatePressed(tmp);
     setAppointment({});
-    console.log(data.appointments)
     /*
     Add appointment info and clear data
     if the appointment name is not a duplicate
