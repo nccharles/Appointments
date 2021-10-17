@@ -9,21 +9,6 @@ import {
   updateContactError,
 } from "./action";
 
-const modalSuccess = (type) => {
-  notification[type]({
-    message: "Success",
-    description: "This contact has been added to your contacts!",
-    duration: 1,
-  });
-};
-const modalWarning = (type) => {
-  notification[type]({
-    message: "Remove a contact",
-    description: "This contact has been removed from your contacts!",
-    duration: 1,
-  });
-};
-
 function* getContactSaga() {
   try {
     yield put(getContactSuccess());
@@ -61,7 +46,6 @@ function* removeContactSaga(payload) {
       localContact.contactTotal = 0;
     }
     yield put(updateContactSuccess(localContact));
-    // modalWarning("warning");
   } catch (err) {
     yield put(getContactError(err));
   }

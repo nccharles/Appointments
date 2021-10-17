@@ -1,5 +1,4 @@
 import { all, put, takeEvery } from "redux-saga/effects";
-import { notification } from "antd";
 
 import {
   actionTypes,
@@ -9,20 +8,6 @@ import {
   updateAppointmentError,
 } from "./action";
 
-const modalSuccess = (type) => {
-  notification[type]({
-    message: "Success",
-    description: "This appointment has been added to your appointments!",
-    duration: 1,
-  });
-};
-const modalWarning = (type) => {
-  notification[type]({
-    message: "Remove a appointment",
-    description: "This appointment has been removed from your appointments!",
-    duration: 1,
-  });
-};
 
 function* getAppointmentSaga() {
   try {
@@ -47,7 +32,6 @@ function* addAppointmentSaga(payload) {
     currentAppointment.appointments.push(appointment);
     currentAppointment.appointmentTotal++;
     yield put(updateAppointmentSuccess(currentAppointment));
-    modalSuccess("success");
   } catch (err) {
     yield put(getAppointmentError(err));
   }
@@ -69,7 +53,6 @@ function* removeAppointmentSaga(payload) {
       localAppointment.appointTotal = 0;
     }
     yield put(updateAppointmentSuccess(localAppointment));
-    modalWarning("warning");
   } catch (err) {
     yield put(getAppointmentError(err));
   }
