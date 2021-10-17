@@ -75,5 +75,5 @@ export default function* rootSaga() {
   yield all([takeEvery(actionTypes.GET_APPOINTMENT, getAppointmentSaga)]);
   yield all([takeEvery(actionTypes.ADD_APPOINTMENT, addAppointmentSaga)]);
   yield all([takeEvery(actionTypes.REMOVE_APPOINTMENT, removeAppointmentSaga)]);
-  yield all([takeEvery(actionTypes.CLEAR_APPOINTMENT_SUCCESS, clearAppointmentSaga)]);
+  yield all([takeEvery(actionTypes.CLEAR_APPOINTMENT, clearAppointmentSaga)]);
 }
