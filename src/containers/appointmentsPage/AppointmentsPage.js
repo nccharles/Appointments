@@ -32,10 +32,6 @@ const AppointmentsPage = ({
     onCreatePressed(tmp);
     setAppointment({});
     setContact([]);
-    /*
-    Add appointment info and clear data
-    if the appointment name is not a duplicate
-    */
   };
 
   const onChange = (e) => {

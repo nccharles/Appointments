@@ -1,3 +1,5 @@
-.link{
-    color: black;
+.form-group .link{
+    color: #74b9ff !important;
+    font-weight: 900 !important;
+    text-transform: uppercase;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route, Redirect, NavLink } from "react-router-dom";
-import "./App.css"
+import "./App.css";
 import AppointmentsPage from "./containers/appointmentsPage/AppointmentsPage";
 import ContactsPage from "./containers/contactsPage/ContactsPage";
 
@@ -26,7 +26,11 @@ function App() {
         <NavLink to={ROUTES.CONTACTS} className="link" activeClassName="active">
           Contacts
         </NavLink>
-        <NavLink to={ROUTES.APPOINTMENTS} className="link"  activeClassName="active">
+        <NavLink
+          to={ROUTES.APPOINTMENTS}
+          className="link"
+          activeClassName="active"
+        >
           Appointments
         </NavLink>
       </nav>
@@ -36,11 +40,9 @@ function App() {
             <Redirect to={ROUTES.CONTACTS} />
           </Route>
           <Route path={ROUTES.CONTACTS}>
-             {/* Add props to ContactsPage */}
             <ContactsPage />
           </Route>
           <Route path={ROUTES.APPOINTMENTS}>
-            {/* Add props to AppointmentsPage */}
             <AppointmentsPage />
           </Route>
         </Switch>

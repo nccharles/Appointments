@@ -1,36 +1,28 @@
 
-nav{
-    background: #e17055;
-    padding: 10px;
-    box-shadow: 0 0 50px 0 #e1715565;
+h1,
+label {
+  color: #0984e3;
+  font-weight: 900;
 }
-.link{
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
+h1 {
+  padding: 10px auto;
+  font-size: 16px;
+  font-weight: bold;
 }
-h1,label{
-    color: #2d3436;
-    font-weight: 900;
+h2 {
+  color: #0984e3;
+  font-size: 20px;
+  font-weight: 900;
 }
-h1{
-padding: 10px auto;
-font-size: 16px;
-font-weight: bold;
+h4 {
+  color: #FFFFFF;
+  font-size: 16px;
 }
-h2{
-color: #2d3436;
-font-size: 20px;font-weight: 900;
-}
-h4{
-    color: #2d3436;
-    font-size: 16px;   
-}
-h5{
-    color: #636e72;
-    font-size: 14px; 
+h5 {
+  color: #FFFFFF;
+  font-size: 14px;
 }
 
-Button{
-    height: 40px;
+Button {
+  height: 40px;
 }
