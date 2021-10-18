@@ -1,26 +1,6 @@
-.content{
-    justify-content: space-around;
-    padding: 20px;
-    min-height: 800px;
-    border-radius: 10px;
-    margin: auto 5px;
-    background: #2d3436 !important;
-}
+
 .appointments-header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-section{
-    padding: 20px;
-}
-section:last-child{
-    width: 40%;
-}
-section:first-child{
-    width: 40%;
-    padding: 30px;
-}
-section:first-child h1{
-    margin-bottom: 30px;
 }

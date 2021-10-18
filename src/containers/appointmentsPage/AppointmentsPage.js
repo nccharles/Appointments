@@ -51,8 +51,8 @@ const AppointmentsPage = ({
     setContact((op) => [...op, value[0]]);
   };
   return (
-    <div className="content row">
-      <section className="col-md-4">
+    <div className="content">
+      <section>
         <h1>Add Appointment</h1>
         <hr />
         <AppointmentForm
@@ -63,7 +63,7 @@ const AppointmentsPage = ({
           selectedContacts={selectedContacts}
         />
       </section>
-      <section className="col-md-4">
+      <section>
         <div className="appointments-header">
           <h1>Appointments</h1>
           <Button variant="danger" onClick={() => onClearPressed()}>
