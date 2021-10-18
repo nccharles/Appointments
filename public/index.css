@@ -143,4 +143,11 @@ section:first-child h1 {
     margin: 2px;
     text-align: center;
   }
+  .empty-list label {
+    padding: 50px 10px 10px;
+    border-radius: 20px;
+    text-align: center;
+    clip-path: polygon(38% 32%, 48% 0, 57% 31%, 99% 37%, 100% 100%, 0 100%, 0 38%);
+    margin-bottom: 0px;
+  }
 }
