@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { removeContact } from "../../store/contact/action";
+import React from "react";
 const ContactPicker = ({ contacts, onChange }) => {
   const options = contacts.map((contact) => (
     <option value={contact.id}>{contact.name}</option>

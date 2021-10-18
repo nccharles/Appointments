@@ -27,7 +27,7 @@ function* addAppointmentSaga(payload) {
     let localContact = JSON.parse(
       JSON.parse(localStorage.getItem("persist:Appointments")).contact
     );
-    let contactObj = localContact.contacts.find((c) => c.id == parseInt(appointment.contact));
+    let contactObj = localContact.contacts.find((c) => c.id === parseInt(appointment.contact));
     appointment.contact = contactObj;
     currentAppointment.appointments.push(appointment);
     currentAppointment.appointmentTotal++;

@@ -2,7 +2,7 @@ import React from "react";
 import "./Appointment.css"
 import { Button } from 'react-bootstrap';
 export const Appointment = ({ appointment,removeAppointment }) => {
-    const {name,email,phone} = appointment.contact
+    const {email} = appointment.contact
   return (
     <div className="appointment-container">
       <div className="section">
