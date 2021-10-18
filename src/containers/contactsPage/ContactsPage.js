@@ -42,13 +42,13 @@ const ContactsPage = ({ contacts, onCreatePressed, onClearPressed }) => {
   };
 
   return (
-    <div className="content row">
-      <section className="col-md-4">
+    <div className="content">
+      <section>
         <h1>Add Contact</h1>
         <hr />
         <ContactForm handleSubmit={handleSubmit} onChange={onChange} />
       </section>
-      <section className="col-md-4">
+      <section>
         <div className="contacts-header">
           <h1>Contacts</h1>
           <Button variant="danger" onClick={() => onClearPressed()}>
