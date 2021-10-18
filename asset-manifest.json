@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Appointments/static/css/main.7799e68b.chunk.css",
-    "main.js": "/Appointments/static/js/main.dd2a543d.chunk.js",
-    "main.js.map": "/Appointments/static/js/main.dd2a543d.chunk.js.map",
+    "main.css": "/Appointments/static/css/main.b50713a4.chunk.css",
+    "main.js": "/Appointments/static/js/main.36fa619e.chunk.js",
+    "main.js.map": "/Appointments/static/js/main.36fa619e.chunk.js.map",
     "runtime-main.js": "/Appointments/static/js/runtime-main.df4cbfb6.js",
     "runtime-main.js.map": "/Appointments/static/js/runtime-main.df4cbfb6.js.map",
     "static/css/2.c1256375.chunk.css": "/Appointments/static/css/2.c1256375.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.3df9423b.chunk.js.map": "/Appointments/static/js/2.3df9423b.chunk.js.map",
     "index.html": "/Appointments/index.html",
     "static/css/2.c1256375.chunk.css.map": "/Appointments/static/css/2.c1256375.chunk.css.map",
-    "static/css/main.7799e68b.chunk.css.map": "/Appointments/static/css/main.7799e68b.chunk.css.map",
+    "static/css/main.b50713a4.chunk.css.map": "/Appointments/static/css/main.b50713a4.chunk.css.map",
     "static/js/2.3df9423b.chunk.js.LICENSE.txt": "/Appointments/static/js/2.3df9423b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.df4cbfb6.js",
     "static/css/2.c1256375.chunk.css",
     "static/js/2.3df9423b.chunk.js",
-    "static/css/main.7799e68b.chunk.css",
-    "static/js/main.dd2a543d.chunk.js"
+    "static/css/main.b50713a4.chunk.css",
+    "static/js/main.36fa619e.chunk.js"
   ]
 }

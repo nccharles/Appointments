@@ -1,5 +1,5 @@
 #root {
-  padding: 30px;
+  margin: auto;
   font-family: "Open Sans", sans-serif !important;
 }
 body {
@@ -21,9 +21,11 @@ nav > a.active {
 nav {
   background: #74b9ff;
   padding: 20px;
-  border-radius: 20px;
 }
-
+nav > div.nav-header {
+  max-width: 1440px;
+  margin: auto;
+}
 h2 {
   font-weight: bold;
   font-size: 18px;
@@ -68,6 +70,15 @@ select {
   box-sizing: border-box;
 }
 
+.content {
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+  justify-content: space-around;
+  min-height: 800px;
+  border-radius: 10px;
+  background: #2d3436 !important;
+}
 .contact {
   margin: 0;
   font-size: 14px;
@@ -80,4 +91,49 @@ select {
 
 .contact-container {
   margin-bottom: 20px;
+}
+section {
+  padding: 20px;
+}
+section:last-child {
+  width: 40%;
+}
+section:first-child {
+  width: 40%;
+  padding: 30px;
+}
+section:first-child h1 {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 1440px) {
+  main {
+    max-width: 1440px;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  nav {
+    padding: 10px;
+    width: 100%;
+    margin: 0 !important;
+  }
+  .content {
+    display: flex;
+    margin: 0;
+    padding: 10px 20px;
+    width: 100%;
+    flex-direction: column !important;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  .attendee {
+    padding: 5px !important;
+    margin: 2px;
+    text-align: center;
+  }
 }
