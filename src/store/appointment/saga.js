@@ -8,7 +8,6 @@ import {
   updateAppointmentError,
 } from "./action";
 
-
 function* getAppointmentSaga() {
   try {
     yield put(getAppointmentSuccess());
@@ -27,8 +26,15 @@ function* addAppointmentSaga(payload) {
     let localContact = JSON.parse(
       JSON.parse(localStorage.getItem("persist:Appointments")).contact
     );
-    let contactObj = localContact.contacts.find((c) => c.id === parseInt(appointment.contact));
-    appointment.contact = contactObj;
+    let addedContacts = [];
+    const { contacts } = appointment;
+    for (let i = 0; i < contacts.length; i++) {
+      let contactObj = localContact.contacts.find(
+        (c) => c.id === parseInt(contacts[i])
+      );
+      addedContacts.push(contactObj);
+    }
+    appointment.contacts = addedContacts;
     currentAppointment.appointments.push(appointment);
     currentAppointment.appointmentTotal++;
     yield put(updateAppointmentSuccess(currentAppointment));
@@ -57,7 +63,6 @@ function* removeAppointmentSaga(payload) {
     yield put(getAppointmentError(err));
   }
 }
-
 
 function* clearAppointmentSaga() {
   try {

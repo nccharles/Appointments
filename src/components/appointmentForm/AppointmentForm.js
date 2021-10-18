@@ -1,8 +1,14 @@
 import React from "react";
 import ContactPicker from "../contactPicker/ContactPicker";
-export const AppointmentForm = ({ onChange, contacts, handleSubmit }) => {
-
-
+import { NavLink } from "react-router-dom";
+import "./AppointmentForm.css";
+export const AppointmentForm = ({
+  onChange,
+  contacts,
+  handleSubmit,
+  handleSelect,
+  selectedOptions,
+}) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-group">
@@ -10,8 +16,19 @@ export const AppointmentForm = ({ onChange, contacts, handleSubmit }) => {
         <input type="text" name="title" onChange={onChange} />
       </div>
       <div className="form-group">
-        <label>Contact</label>
-        <ContactPicker name="contact" contacts={contacts} onChange={onChange} />
+        <label>Contact</label>{" "}
+        {contacts.length === 0 && (
+          <NavLink to="/contacts" className="link">
+            🆕 Add contact
+          </NavLink>
+        )}
+        <ContactPicker
+          name="contact"
+          handleSelect={handleSelect}
+          selectedOptions={selectedOptions}
+          contacts={contacts}
+          onChange={onChange}
+        />
       </div>
       <div className="form-group">
         <label>Date</label>

@@ -20,18 +20,15 @@ const AppointmentsPage = ({
   */
 
   const [appointment, setAppointment] = useState({});
+  const [selectedOptions, setOptions] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (
-      !appointment.title ||
-      !appointment.contact ||
-      !appointment.date ||
-      !appointment.time
-    )
+    if (!appointment.title || !appointment.date || !appointment.time)
       return alert("Please fill all required fields");
     e.target.reset();
     let tmp = appointment;
     tmp.id = data.appointmentTotal + 1;
+    tmp.contacts = selectedOptions;
     onCreatePressed(tmp);
     setAppointment({});
     /*
@@ -46,7 +43,14 @@ const AppointmentsPage = ({
       [e.target.name]: e.target.value,
     }));
   };
-
+  const handleSelect = (event) => {
+    let value = Array.from(
+      event.target.selectedOptions,
+      (option) => option.value
+    );
+    setOptions((op) => [...op, value[0]]);
+    console.log(selectedOptions);
+  };
   return (
     <div className="content row">
       <section className="col-md-4">
@@ -56,6 +60,8 @@ const AppointmentsPage = ({
           contacts={contacts}
           handleSubmit={handleSubmit}
           onChange={onChange}
+          handleSelect={handleSelect}
+          selectedOptions={selectedOptions}
         />
       </section>
       <section className="col-md-4">
