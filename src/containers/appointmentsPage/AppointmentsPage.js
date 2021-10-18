@@ -20,7 +20,7 @@ const AppointmentsPage = ({
   */
 
   const [appointment, setAppointment] = useState({});
-  const [selectedOptions, setOptions] = useState([]);
+  const [selectedContacts, setContact] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!appointment.title || !appointment.date || !appointment.time)
@@ -28,9 +28,10 @@ const AppointmentsPage = ({
     e.target.reset();
     let tmp = appointment;
     tmp.id = data.appointmentTotal + 1;
-    tmp.contacts = selectedOptions;
+    tmp.contacts = selectedContacts;
     onCreatePressed(tmp);
     setAppointment({});
+    setContact([]);
     /*
     Add appointment info and clear data
     if the appointment name is not a duplicate
@@ -45,11 +46,13 @@ const AppointmentsPage = ({
   };
   const handleSelect = (event) => {
     let value = Array.from(
-      event.target.selectedOptions,
+      event.target.selectedContacts,
       (option) => option.value
     );
-    setOptions((op) => [...op, value[0]]);
-    console.log(selectedOptions);
+    if (selectedContacts.includes(value[0])) {
+      return alert("Already Selected!!!");
+    }
+    setContact((op) => [...op, value[0]]);
   };
   return (
     <div className="content row">
@@ -61,7 +64,7 @@ const AppointmentsPage = ({
           handleSubmit={handleSubmit}
           onChange={onChange}
           handleSelect={handleSelect}
-          selectedOptions={selectedOptions}
+          selectedContacts={selectedContacts}
         />
       </section>
       <section className="col-md-4">

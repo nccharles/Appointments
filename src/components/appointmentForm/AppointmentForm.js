@@ -7,7 +7,7 @@ export const AppointmentForm = ({
   contacts,
   handleSubmit,
   handleSelect,
-  selectedOptions,
+  selectedContacts,
 }) => {
   return (
     <form onSubmit={handleSubmit}>
@@ -16,16 +16,14 @@ export const AppointmentForm = ({
         <input type="text" name="title" onChange={onChange} />
       </div>
       <div className="form-group">
-        <label>Contact</label>{" "}
-        {contacts.length === 0 && (
-          <NavLink to="/contacts" className="link">
-            🆕 Add contact
-          </NavLink>
-        )}
+        <label>Contacts</label>{" "}
+        <NavLink to="/contacts" className="link">
+          🆕 Add contact
+        </NavLink>
         <ContactPicker
           name="contact"
           handleSelect={handleSelect}
-          selectedOptions={selectedOptions}
+          selectedContacts={selectedContacts}
           contacts={contacts}
           onChange={onChange}
         />
