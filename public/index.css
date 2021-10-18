@@ -69,7 +69,14 @@ select {
   margin-bottom: 10px;
   box-sizing: border-box;
 }
-
+.empty-list label {
+  padding: 20px 10px 40px;
+  background: #636e72;
+  color: #fdcb6e !important;
+  border-radius: 10px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 49% 86%, 0 100%, 35% 74%, 0% 75%);
+  margin-bottom: 30px;
+}
 .content {
   display: flex;
   padding: 0;

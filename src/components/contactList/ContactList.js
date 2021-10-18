@@ -10,6 +10,13 @@ const ContactList = ({ data, onRemovePressed }) => {
       {contacts.map((contact) => (
         <Contact key={contact.id} contact={contact} removeContact={onRemovePressed} />
       ))}
+       {contacts.length === 0 && (
+        <div className="empty-list">
+          <label>
+          👤 No any Contact added yet.Please fill the form to add Contact!
+          </label>
+        </div>
+      )}
     </div>
   );
 };
