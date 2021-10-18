@@ -1,15 +1,23 @@
-.appointment-container{
-    display: flex;
-    flex-direction: row;
-    margin: 10px auto;
-    padding: 5px;
-    background-color: #636e72;
-    border-radius: 10px;
-    border-left: 10px solid #74b9ff;
-    justify-content: space-between;
+.appointment-container {
+  display: flex;
+  flex-direction: row;
+  margin: 10px auto;
+  padding: 5px;
+  background-color: #636e72;
+  border-radius: 10px;
+  border-left: 10px solid #74b9ff;
+  justify-content: space-between;
 }
-.section{
-    width: 100%;
-    margin: 0;
-    padding: 0;
+.section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.attendee {
+  padding: 5px;
+  margin: 10px auto;
+  color: aliceblue;
+  font-size: 12px !important;
+  border-radius: 20px;
+  border: 1px solid #a29bfe;
 }

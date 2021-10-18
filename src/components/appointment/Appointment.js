@@ -3,19 +3,18 @@ import "./Appointment.css";
 import { Button } from "react-bootstrap";
 export const Appointment = ({ appointment, removeAppointment }) => {
   const { contacts } = appointment;
-  let contactsList = "";
-  for (var i = 0; i < contacts.length; i++) {
-    contactsList += contacts[i].name + ", ";
-  }
-  contactsList = contactsList.slice(0, -2); //remove the trailing space and comma
-
+  let contactsList = contacts.map((c) => (
+    <label className="attendee">
+      👤{c.name} | {c.email}
+    </label>
+  ));
   return (
     <div className="appointment-container">
       <div className="section">
-        <h2>{appointment.title}</h2>
-        <h4>{contactsList}</h4>
+        <h2>🔖 {appointment.title}</h2>
+        {contactsList}
         <h5>
-          {appointment.date} | {appointment.time}
+          🗓️ {appointment.date} | 🕑{appointment.time}
         </h5>
       </div>
       <Button

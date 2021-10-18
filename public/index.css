@@ -61,7 +61,8 @@ select {
   border-radius: 4px;
   padding: 7px 9.5px 9px 9.5px;
   outline: none;
-  color: #ffffff;
+  color: aliceblue;
+  font-size: 14px !important;
   width: 100%;
   margin-bottom: 10px;
   box-sizing: border-box;
