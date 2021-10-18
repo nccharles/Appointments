@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/Appointments/static/css/main.b50713a4.chunk.css",
-    "main.js": "/Appointments/static/js/main.cf22fbb7.chunk.js",
-    "main.js.map": "/Appointments/static/js/main.cf22fbb7.chunk.js.map",
+    "main.js": "/Appointments/static/js/main.c064da24.chunk.js",
+    "main.js.map": "/Appointments/static/js/main.c064da24.chunk.js.map",
     "runtime-main.js": "/Appointments/static/js/runtime-main.df4cbfb6.js",
     "runtime-main.js.map": "/Appointments/static/js/runtime-main.df4cbfb6.js.map",
     "static/css/2.c1256375.chunk.css": "/Appointments/static/css/2.c1256375.chunk.css",
-    "static/js/2.3df9423b.chunk.js": "/Appointments/static/js/2.3df9423b.chunk.js",
-    "static/js/2.3df9423b.chunk.js.map": "/Appointments/static/js/2.3df9423b.chunk.js.map",
+    "static/js/2.ebd63fd4.chunk.js": "/Appointments/static/js/2.ebd63fd4.chunk.js",
+    "static/js/2.ebd63fd4.chunk.js.map": "/Appointments/static/js/2.ebd63fd4.chunk.js.map",
     "index.html": "/Appointments/index.html",
     "static/css/2.c1256375.chunk.css.map": "/Appointments/static/css/2.c1256375.chunk.css.map",
     "static/css/main.b50713a4.chunk.css.map": "/Appointments/static/css/main.b50713a4.chunk.css.map",
-    "static/js/2.3df9423b.chunk.js.LICENSE.txt": "/Appointments/static/js/2.3df9423b.chunk.js.LICENSE.txt"
+    "static/js/2.ebd63fd4.chunk.js.LICENSE.txt": "/Appointments/static/js/2.ebd63fd4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.df4cbfb6.js",
     "static/css/2.c1256375.chunk.css",
-    "static/js/2.3df9423b.chunk.js",
+    "static/js/2.ebd63fd4.chunk.js",
     "static/css/main.b50713a4.chunk.css",
-    "static/js/main.cf22fbb7.chunk.js"
+    "static/js/main.c064da24.chunk.js"
   ]
 }
