@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 export const Appointment = ({ appointment, removeAppointment }) => {
   const { contacts } = appointment;
   let contactsList = contacts.map((c) => (
-    <label className="attendee">
+    <label className="attendee" key={c.id}>
       👤{c.name} | {c.email}
     </label>
   ));

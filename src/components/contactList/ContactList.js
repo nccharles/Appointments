@@ -8,7 +8,7 @@ const ContactList = ({ data, onRemovePressed }) => {
   return (
     <div className="contact-list-header">
       {contacts.map((contact) => (
-        <Contact contact={contact} removeContact={onRemovePressed} />
+        <Contact key={contact.id} contact={contact} removeContact={onRemovePressed} />
       ))}
     </div>
   );

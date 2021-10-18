@@ -8,7 +8,7 @@ const ApppointmentList = ({ data, onRemovePressed }) => {
   return (
     <div className="appointment-list-header">
       {appointments.map((appointment) => (
-        <Appointment appointment={appointment} removeAppointment={onRemovePressed} />
+        <Appointment key={appointment.id} appointment={appointment} removeAppointment={onRemovePressed} />
       ))}
     </div>
   );
