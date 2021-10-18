@@ -42,7 +42,7 @@ const AppointmentsPage = ({
   };
   const handleSelect = (event) => {
     let value = Array.from(
-      event.target.selectedContacts,
+      event.target.selectedOptions,
       (option) => option.value
     );
     if (selectedContacts.includes(value[0])) {
