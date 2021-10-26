@@ -3,10 +3,10 @@
     flex-direction: row;
     margin: 10px auto;
     padding: 5px;
-    background-color: #636e72;
+    background-color: var(--color-background);
     border-radius: 10px;
-    border-left: 10px solid #74b9ff;
     justify-content: space-between;
+    box-shadow: -2px 2px 5px var(--color-shadow);
 }
 .section{
     width: 100%;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route, Redirect, NavLink } from "react-router-dom";
 import "./App.css";
+import ColorSchemeToggle from './components/ColorScheme/ColorSchemeToggle';
 import AppointmentsPage from "./containers/appointmentsPage/AppointmentsPage";
 import ContactsPage from "./containers/contactsPage/ContactsPage";
 
@@ -38,6 +39,7 @@ function App() {
           >
             Appointments
           </NavLink>
+          <ColorSchemeToggle />
         </div>
       </nav>
       <main>

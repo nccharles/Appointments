@@ -7,26 +7,181 @@ body {
     -moz-osx-font-smoothing: grayscale;
   
     --color-background: #FAFAFA;
-    --color-foreground: #1F2023;
+    --color-foreground: #2d3436;
     --color-shadow: #AAA;
+    --color-main:#0984e3;
+    --color-white:#FAFAFA;
     
     --image-grayscale: 0;
     --image-opacity: 100%;
   }
   
   body.dark {
-    --color-background: #1F2023;
+    --color-background: #2d3436;
     --color-foreground: #EFEFEF;
     --color-shadow: rgba(0, 0, 0 , 0.8);
+    --color-main:#0984e3;
+    --color-white:#FAFAFA;
   
-    
-    --image-grayscale: 50%;
-    --image-opacity: 90%;
+  }
+  #root{
+      background: var(--color-background);
+  }
+  .link {
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 14px !important;
+    color: var(--color-foreground) !important;
+    margin-right: 30.5px !important;
+    text-decoration-line: none !important;
+  }
+  
+  nav > a.active {
+    text-decoration-line: underline;
+  }
+  
+  nav {
+    background: var(--color-background);
+    padding: 20px;
+  }
+  nav > div.nav-header {
+    max-width: 1440px;
+    margin: auto;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--color-foreground);
+    margin: 0;
+    margin-bottom: 18px;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid var(--color-shadow);
+    margin: 20px 0;
+  }
+  
+  input[type="submit"] {
+    background: var(--color-main);
+    border-radius: 4px;
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  
+  input,
+  select {
+    font-family: "Open Sans", sans-serif;
+    background: var(--color-background);
+    border: 1px solid var(--color-shadow);
+    border-radius: 4px;
+    padding: 7px 9.5px 9px 9.5px;
+    outline: none;
+    color: var(--color-foreground);
+    font-size: 14px !important;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  .empty-list label {
+    padding: 20px 10px 40px;
+    background: var(--color-shadow);
+    color: #fdcb6e !important;
+    border-radius: 10px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 49% 86%, 0 100%, 35% 74%, 0% 75%);
+    margin-bottom: 30px;
+  }
+  .content {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    min-height: 800px;
+    /* border-radius: 10px; */
+    background: var(--color-background) !important;
+  }
+  .contact {
+    margin: 0;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .contact.contact-title {
+    font-weight: bold;
+  }
+  
+  .contact-container {
+    margin-bottom: 20px;
+  }
+  section {
+    padding: 20px;
+  }
+  section:last-child {
+    width: 40%;
+  }
+  section:first-child {
+    width: 40%;
+    padding: 30px;
+  }
+  section:first-child h1 {
+    margin-bottom: 30px;
+  }
+  @media only screen and (min-width: 1440px) {
+    main {
+      max-width: 1440px;
+      margin: auto;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    nav {
+      padding: 10px;
+      width: 100%;
+      margin: 0 !important;
+    }
+    .content {
+      display: flex;
+      margin: 0;
+      padding: 10px 20px;
+      width: 100%;
+      flex-direction: column !important;
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+    }
+    .attendee {
+      padding: 5px !important;
+      margin: 2px;
+      text-align: center;
+    }
+    .empty-list label {
+      padding: 50px 10px 10px;
+      border-radius: 20px;
+      text-align: center;
+      clip-path: polygon(38% 32%, 48% 0, 57% 31%, 99% 37%, 100% 100%, 0 100%, 0 38%);
+      margin-bottom: 0px;
+    }
   }
   
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
+  }
+  .nav-header{
+      display: flex;
+      flex-direction: row;
+
   }
   
   img,
