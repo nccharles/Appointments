@@ -1,25 +1,25 @@
 h1,
 label {
-  color: #0984e3;
+  color: var(--color-main);
   font-weight: 900;
 }
 h1 {
   padding: 10px auto;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 h2 {
-  color: #0984e3;
-  font-size: 20px;
+  color: var(--color-main);
+  font-size: 16px;
   font-weight: 900;
 }
 h4 {
   color: var(--color-foreground);
-  font-size: 16px;
+  font-size: 14px;
 }
 h5 {
   color: var(--color-foreground);
-  font-size: 14px;
+  font-size: 12px;
 }
 
 Button {
