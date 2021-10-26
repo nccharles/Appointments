@@ -25,6 +25,9 @@ h5 {
 Button {
   height: 40px;
 }
+hr{
+  color: var(--color-foreground);
+}
 form {
   box-shadow: -1px 1px 2px var(--color-shadow);
   padding: 10px;
